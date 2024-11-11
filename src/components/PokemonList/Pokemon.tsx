@@ -15,6 +15,7 @@ export default function Pokemon({ pokemon, onClick }: PokemonProps) {
   
   return (
     <PokemonRenderContainer onClick={onClick}>
+      <Image src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemonId}.png`} />
       <PokemonNo>#{pokemonId}</PokemonNo>
       <PokemonName>{capitaliseFirstLetter(pokemon.name)}</PokemonName>
       <PokemonTypeWrapper>
@@ -76,12 +77,12 @@ const PokemonRenderContainer = styled.div`
   }
 `
   
-// const Image = styled.img`
-//   position: absolute;
-//   top: -70px;
-//   image-rendering: pixelated;
-//   transition-duration: 100ms;
-// `
+const Image = styled.img`
+  position: absolute;
+  top: -70px;
+  image-rendering: pixelated;
+  transition-duration: 100ms;
+`
 
 const PokemonNo = styled.span`
   font-size: 12px;

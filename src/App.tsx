@@ -126,8 +126,8 @@ const App: React.FC = () => {
         <NavbarWrapper>
           <Navbar>
             <LeftBar>
-              {/* <PokeballLogoImg src="/images/pokeball-logo.jpeg" alt="" />
-              <PokemonLogoImg src="/images/pokemon-logo.png" alt=""/> */}
+              <PokeballLogoImg src="/images/pokeball-logo.jpeg" alt="" />
+              <PokemonLogoImg src="/images/pokemon-logo.png" alt=""/>
             </LeftBar>
             <RightBar>
               {!size ? (
