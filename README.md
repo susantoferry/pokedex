@@ -6,6 +6,8 @@ This project is a Pokémon detail viewer designed with React, Styled Components,
 
 ## Demo
 
+https://pokedex-fpyikxpt7-ferrys-projects-87bb8322.vercel.app/
+
 ## Features
 
 - **Pokémon List View**: Displays a grid of Pokémon, each with its name, type, and index number.
