@@ -720,11 +720,11 @@ const PokemonAbilitiesContainer = styled.div`
   
 `
 
-const PokemonAbilitiesWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-`
+// const PokemonAbilitiesWrapper = styled.div`
+//   display: flex;
+//   justify-content: center;
+//   flex-direction: column;
+// `
 
 const FlexRow = styled.div`
   display: flex;

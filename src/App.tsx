@@ -168,35 +168,35 @@ const App: React.FC = () => {
 
 export default App
 
-const ShineEffect = keyframes`
-  0% {
-    left: -100%;
-  }
-  100% {
-    left: 100%;
-  }
-`
+// const ShineEffect = keyframes`
+//   0% {
+//     left: -100%;
+//   }
+//   100% {
+//     left: 100%;
+//   }
+// `
 
-const Rotate = keyframes`
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-`
+// const Rotate = keyframes`
+//   0% {
+//     transform: rotate(0deg);
+//   }
+//   100% {
+//     transform: rotate(360deg);
+//   }
+// `
 
-const rotateWithPause = keyframes`
-  0% {
-    transform: rotate(0deg);
-  }
-  77% {
-    transform: rotate(360deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-`
+// const rotateWithPause = keyframes`
+//   0% {
+//     transform: rotate(0deg);
+//   }
+//   77% {
+//     transform: rotate(360deg);
+//   }
+//   100% {
+//     transform: rotate(360deg);
+//   }
+// `
 
 const AppContainer = styled.div`
   display: flex;
@@ -252,44 +252,44 @@ const LeftBar = styled.div`
   
 `
 
-const EmptyPokemonDetailContainer = styled.div`
-  width: 100%;
-  max-width: 250px;
-  display: flex;
+// const EmptyPokemonDetailContainer = styled.div`
+//   width: 100%;
+//   max-width: 250px;
+//   display: flex;
   
-`
+// `
 
-const PokeballWrapper = styled.div`
-  position: relative;
-  width: 70px;
-  height: 70px;
-  margin-top: 20px;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`
+// const PokeballWrapper = styled.div`
+//   position: relative;
+//   width: 70px;
+//   height: 70px;
+//   margin-top: 20px;
+//   overflow: hidden;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// `
 
-const PokeballImageContainer = styled.div`
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
+// const PokeballImageContainer = styled.div`
+//   width: 100%;
+//   height: 100%;
+//   position: absolute;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// `;
 
-const PokeballImage = styled.div`
-  width: 100%;
-  height: 100%;
-  background-image: url('/images/pokeball1.png');
-  background-size: cover;
-  background-position: center;
-  border-radius: 50%;
-  animation: ${rotateWithPause} 4.6s linear infinite;
-  transform-origin: center;
-  filter: brightness(0.5) grayscale(1);
-`;
+// const PokeballImage = styled.div`
+//   width: 100%;
+//   height: 100%;
+//   background-image: url('/images/pokeball1.png');
+//   background-size: cover;
+//   background-position: center;
+//   border-radius: 50%;
+//   animation: ${rotateWithPause} 4.6s linear infinite;
+//   transform-origin: center;
+//   filter: brightness(0.5) grayscale(1);
+// `;
 
 // const RightBar = styled.div`
 //   display: flex;

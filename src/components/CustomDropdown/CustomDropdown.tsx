@@ -57,7 +57,7 @@ const CustomDropdown: React.FC<CustomDropdownProps> = ({ pokemonType, onChange }
           </DropdownListItem>
           {pokemonType
             .sort((a, b) => a.name > b.name ? 1 : -1)
-            .map((option, key) => {
+            .map((option) => {
             const { bgColor, iconType } = colorTypes(option.name)
             return (
               <DropdownListItem
