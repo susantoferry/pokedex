@@ -6,7 +6,7 @@ This project is a Pokémon detail viewer designed with React, Styled Components,
 
 ## Demo
 
-https://pokedex-gold-ten.vercel.app/
+https://pokedex-fs.vercel.app/
 
 ## Features
 
