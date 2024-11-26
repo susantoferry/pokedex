@@ -100,13 +100,6 @@ const ChartContainer = styled.div`
   display: block;
   margin: 0 auto;
   z-index: -1;
-  /* position: relative;
-  width: 250px;
-  height: 250px;
-  display: flex;
-  align-items: center;
-  justify-content: center; */
-  /* overflow: hidden; */
 `;
 
 const HexagonBackground = styled.div`
@@ -120,12 +113,6 @@ const HexagonBackground = styled.div`
 `;
 
 const RadarContainer = styled.div`
-  /* position: relative;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 5; */
   position: relative;
   width: 100%;
   height: 100%;
@@ -134,18 +121,11 @@ const RadarContainer = styled.div`
 
 const Hexagon = styled.div`
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-  /* margin: 20px; */
   position: absolute;
   opacity: 0.6;
 `
 
 const HexagonClip1 = styled(Hexagon)`
-  /* width: 45px;
-  height: 50px;
-  background-color: #698edc;
-  top: 80px;
-  left: 85px;
-  z-index: 4; */
   width: 35px;
   height: 40px;
   background-color: #698edc;
@@ -154,12 +134,6 @@ const HexagonClip1 = styled(Hexagon)`
 `;
 
 const HexagonClip2 = styled(Hexagon)`
-  /* width: 90px;
-  height: 105px;
-  background-color: #8dbef5;
-  top: 52px;
-  left: 65px;
-  z-index: 3; */
   width: 68px;
   height: 75px;
   background-color: #8dbef5;
@@ -168,12 +142,6 @@ const HexagonClip2 = styled(Hexagon)`
 `
 
 const HexagonClip3 = styled(Hexagon)`
-  /* width: 130px;
-  height: 150px;
-  background-color: #a9d1ff;
-  top: 30px;
-  left: 44px;
-  z-index: 2; */
   width: 95px;
   height: 110px;
   background-color: #a9d1ff;
@@ -182,12 +150,6 @@ const HexagonClip3 = styled(Hexagon)`
 `
 
 const HexagonClip4 = styled(Hexagon)`
-  /* width: 165px;
-  height: 190px;
-  background-color: #c6e4ff;
-  top: 10px;
-  left: 25px;
-  z-index: 1; */
   width: 125px;
   height: 140px;
   background-color: #c6e4ff;
@@ -196,17 +158,6 @@ const HexagonClip4 = styled(Hexagon)`
 `
 
 const Circle = styled.div`
-  /* background: #c6e4ff;
-  width: 100%;
-  height: 100%;
-  border-radius: 100%;
-  top: 20px;
-  left: 25px;
-  position: absolute;
-  opacity: 0.3;
-  max-width: 210px;
-  max-height: 210px;
-  filter: blur(10px); */
   background: #c6e4ff;
   width: 160px;
   height: 160px;

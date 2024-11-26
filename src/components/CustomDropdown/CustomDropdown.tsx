@@ -12,12 +12,12 @@ interface Option {
 
 interface CustomDropdownProps {
   pokemonType: Option[];
-  onChange: (optionName: string) => void; 
+  onChange: (optionName: string) => void;
+  selectedType: string;
 }
 
-const CustomDropdown: React.FC<CustomDropdownProps> = ({ pokemonType, onChange }) => {
+const CustomDropdown: React.FC<CustomDropdownProps> = ({ pokemonType, onChange, selectedType }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedOption, setSelectedOption] = useState<string>("All Types");
   const dropdownRef = useRef<HTMLDivElement>(null); 
 
   const handleDropdownToggle = () => {
@@ -25,7 +25,6 @@ const CustomDropdown: React.FC<CustomDropdownProps> = ({ pokemonType, onChange }
   };
 
   const handleOptionClick = (optionName: string) => {
-    setSelectedOption(optionName);
     onChange(optionName);
     setIsOpen(false);
   };
@@ -47,7 +46,7 @@ const CustomDropdown: React.FC<CustomDropdownProps> = ({ pokemonType, onChange }
   return (
     <DropdownContainer ref={dropdownRef}>
       <DropdownButton onClick={handleDropdownToggle}>
-        {capitaliseFirstLetter(selectedOption)}
+        {capitaliseFirstLetter(selectedType || "All Types")}
         <span>{isOpen ? <CustomArrowUpIcon/> : <CustomArrowDownIcon/> }</span>
       </DropdownButton>
       {isOpen && (
@@ -62,6 +61,7 @@ const CustomDropdown: React.FC<CustomDropdownProps> = ({ pokemonType, onChange }
             return (
               <DropdownListItem
                 key={option.name}
+                value={selectedType}
                 onClick={() => handleOptionClick(option.name)}
               >
               <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '10px'}}>
@@ -188,11 +188,10 @@ const IconImg = styled.img`
     inset 0 -8px 10px rgba(0, 0, 0, 0.3),  
     inset 0 6px 10px rgba(255, 255, 255, 0.6);
 
-  /* Shiny animation overlay */
   &::before {
     content: '';
     position: absolute;
-    top: -50%; /* Start the shine effect outside the icon */
+    top: -50%;
     left: -50%;
     width: 200%;
     height: 200%;

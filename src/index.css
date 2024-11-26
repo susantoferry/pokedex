@@ -45,23 +45,29 @@ body {
   /* width: 100%; */
   overflow-x: hidden !important;
   overflow-y: auto !important;
+  /* overflow-x: hidden;
+  overflow-y: scroll; */
   overscroll-behavior: none;
-  padding: 0 10vw;
+  /* padding: 0 10vw; */
   width: 100%;
+}
+
+.no-scroll {
+  overflow: hidden!important;
 }
 
 body::before {
   content: ' ';
   display: block;
-  position: fixed; /* Change this to fixed */
+  position: fixed;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
   opacity: 1;
-  background-image: url('/images/bg2.png');
+  background-image: url('/images/bg2.jpeg');
   background-repeat: no-repeat;
-  background-position: center; /* Adjust as needed */
+  background-position: center;
   background-size: cover;
   filter: contrast(1) brightness(0.6);
 }
@@ -73,7 +79,7 @@ body::after {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url(https://assets.codepen.io/13471/sparkles.gif), url(https://assets.codepen.io/13471/holo.png), linear-gradient(125deg, #ff008450 15%, #fca40040 30%, #ffff0030 40%, #00ff8a20 60%, #00cfff40 70%, #cc4cfa50 85%);
+  background-image: url('/images/sparkles.gif'), url('/images/holo.png'), linear-gradient(125deg, #ff008450 15%, #fca40040 30%, #ffff0030 40%, #00ff8a20 60%, #00cfff40 70%, #cc4cfa50 85%);
   background-position: 30% 70%;
   background-blend-mode: overlay;
   background-size: cover;

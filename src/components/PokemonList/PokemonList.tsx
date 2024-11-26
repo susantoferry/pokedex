@@ -1,29 +1,19 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import Pokemon from './Pokemon'
 import { PokemonModel } from '../../models/pokemon';
-import { getPokemonIdFromUrl } from '../../utils/Utils';
 
 interface PokemonListProps {
   pokemons: PokemonModel[];
-  onPokemonClick: (id: number) => void;
 }
 
-const PokemonList: React.FC<PokemonListProps> = ({ pokemons, onPokemonClick }) => {
-
+const PokemonList: React.FC<PokemonListProps> = ({ pokemons }) => {
   return (
     <PokemonListContainer>
       <PokemonListWrapper>
-        
         { pokemons.map((pokemon, i) => (
           <React.Fragment key={i}>
-            <Pokemon
-              pokemon={pokemon}
-              onClick={() => {
-                const pokemonId = getPokemonIdFromUrl(pokemon.url)
-                onPokemonClick(pokemonId);
-              }}
-            />
+            <Pokemon pokemon={pokemon} />
           </React.Fragment>
         ))}
       </PokemonListWrapper>
@@ -36,41 +26,38 @@ export default PokemonList;
 const PokemonListContainer = styled.div`
   overflow-y: auto;
   flex: 1;
-
-  transition: all 1s ease-in-out;
-  
-  @media (max-width: 1720px) {
-    margin-right: 20px;
-  }
-
-  @media (max-width: 1580px) {
-    margin-right: 40px;
-  }
-
-  @media (max-width: 1490px) {
-    margin-right: 50px;
-  }
-
-  @media (max-width: 1271px) {
-    margin-right: 60px;
-  }
-
-  @media (max-width: 1100px) {
-    margin-right: 0px;
-  }
 `
 
 const PokemonListWrapper = styled.section`
   position: relative;
-  display: grid;
+  display: grid !important;
   flex-direction: column;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
   width: 100%;
   flex: 0 0 75%;
   margin-bottom: 20px;
   gap: 10px;
+  padding-right: 10px;
 
-  @media (min-width: 1201px) and (max-width: 1440px) {
-    grid-template-columns: repeat(auto-fit, minmax(235px, 1fr));
+  @media (min-width: 1201px) and (max-width: 1550px) {
+    grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+    padding-right: 10px;
+  }
+
+  @media (min-width: 1001px) and (max-width: 1100px) {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
+  }
+
+  @media (min-width: 768px) and (max-width: 1000px){
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)) !important;
+  }
+
+  @media (max-width: 768px) {
+    display: flex!important;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
   }
 `

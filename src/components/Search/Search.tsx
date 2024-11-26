@@ -1,12 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled, { keyframes } from "styled-components";
 import SearchIcon from '@mui/icons-material/Search';
 
 interface SearchProps {
   onSearch: (searchTerm: string) => void;
+  searchValue: string;
 }
 
-const Search: React.FC<SearchProps> = ({ onSearch }) => {
+const Search: React.FC<SearchProps> = ({ onSearch, searchValue }) => {
 
   const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
     const searchTerm = event.target.value.toLowerCase();
@@ -14,17 +15,16 @@ const Search: React.FC<SearchProps> = ({ onSearch }) => {
   }
 
   return (
-    <>
-      <SearchWrapper>
-        <SearchInput 
-          placeholder='Search your pokemon'
-          onChange={handleSearch}
-        />
-        <SearchButtonWrapper>
-          <CustomSearchIcon />
-        </SearchButtonWrapper>
-      </SearchWrapper>
-    </>
+    <SearchWrapper>
+      <SearchInput 
+        placeholder='Search your pokemon'
+        onChange={handleSearch}
+        value={searchValue}
+      />
+      <SearchButtonWrapper>
+        <CustomSearchIcon />
+      </SearchButtonWrapper>
+    </SearchWrapper>
   )
 }
 

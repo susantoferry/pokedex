@@ -79,8 +79,6 @@ export const pokemonTypes = {
   ]
 };
 
-// export const iconTypes = (type)
-
 export const colorTypes = (type: string) => {
   let bgColor = ""
   let iconType = ""
